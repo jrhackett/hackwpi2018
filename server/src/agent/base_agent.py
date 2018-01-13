@@ -7,7 +7,7 @@ class BaseAgent:
 
     x: int
     y: int
-    resource_skills: Dict[ResourceType, int]
+    resource_skills: dict
     speed: int
     attack: int
     defense: int
