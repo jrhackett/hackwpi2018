@@ -1,4 +1,4 @@
-from swarm_af_server.src.map.resources import ResourceType
+from server.src.map.resources import ResourceType
 
 
 class BaseTile:
