@@ -20,5 +20,6 @@ class Worker(BaseAgent):
         self.speed = 30
         self.attack = 5
         self.defense = 5
+        self.health = 50
         self.symbol = "P"
         self.agent_type = AgentType.WORKER

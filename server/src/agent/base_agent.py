@@ -11,5 +11,6 @@ class BaseAgent:
     speed: int
     attack: int
     defense: int
+    health: int
     symbol: str
     agent_type: AgentType
