@@ -1,0 +1,29 @@
+map:
+  width: 100
+  height: 100
+  density: 0.50
+resources:
+- name: "COAL"
+  availability: 1.0
+  average_yield: 1000
+- name: "COPPER"
+  availability: 1.0
+  average_yield: 1000
+- name: "FOOD"
+  availability: 1.0
+  average_yield: 1000
+- name: "GOLD"
+  availability: 1.0
+  average_yield: 1000
+- name: "IRON"
+  availability: 1.0
+  average_yield: 1000
+- name: "OIL"
+  availability: 1.0
+  average_yield: 1000
+- name: "WATER"
+  availability: 1.0
+  average_yield: 1000
+- name: "WOOD"
+  availability: 1.0
+  average_yield: 1000
