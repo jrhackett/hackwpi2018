@@ -5,25 +5,41 @@ map:
 resources:
 - name: "COAL"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "COPPER"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "FOOD"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "GOLD"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "IRON"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "OIL"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "WATER"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
 - name: "WOOD"
   availability: 1.0
-  average_yield: 1000
+  average_yield: 10000
+  average_yield_variation: 0.25
+  average_cluster_radius: 3
