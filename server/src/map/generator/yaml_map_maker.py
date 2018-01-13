@@ -1,7 +1,7 @@
 import os
 import yaml
 
-from swarm_af_server.src.map.map import Map
+from server.src.map.map import Map
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 

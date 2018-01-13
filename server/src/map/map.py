@@ -1,4 +1,4 @@
-from swarm_af_server.src.map import tiles
+from server.src.map import tiles
 
 
 class Map:

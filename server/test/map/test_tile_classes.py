@@ -1,7 +1,7 @@
 import pytest
 
-from swarm_af_server.src.map import tiles
-from swarm_af_server.src.map.resources import ResourceType
+from server.src.map import tiles
+from server.src.map.resources import ResourceType
 
 
 class TestTileClasses:
@@ -15,8 +15,7 @@ class TestTileClasses:
         (tiles.NoneTile, ResourceType.NONE, ' '),
         (tiles.OilTile, ResourceType.OIL, 'O'),
         (tiles.WaterTile, ResourceType.WATER, '~'),
-        (tiles.WoodTile, ResourceType.WOOD, 'W'),
-
+        (tiles.WoodTile, ResourceType.WOOD, 'W')
     ])
     def test_tile_symbols_and_enumerations(self, tile_class, expected_type: ResourceType, expected_symbol: str):
         tile: tiles.BaseTile = tile_class()

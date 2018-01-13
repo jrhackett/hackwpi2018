@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-install_requires = []
+install_requires = ["pytest", "PyYAML"]
 
 setup(
     name='swarm-af-server',
