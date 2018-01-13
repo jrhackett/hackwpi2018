@@ -1,0 +1,32 @@
+map:
+  width: 100
+  height: 100
+  density: 0.50
+  resources:
+  - coal:
+    availability: 1.0
+    average_yield: 1000
+  - copper:
+    availability: 1.0
+    average_yield: 1000
+  - food:
+    availability: 1.0
+    average_yield: 1000
+  - gold:
+    availability: 1.0
+    average_yield: 1000
+  - iron:
+    availability: 1.0
+    average_yield: 1000
+  - oil:
+    availability: 1.0
+    average_yield: 1000
+  - water:
+    availability: 1.0
+    average_yield: 1000
+  - wood:
+    availability: 1.0
+    average_yield: 1000
+  - iron:
+    availability: 1.0
+    average_yield: 1000
