@@ -1,7 +1,8 @@
+from abc import ABC
 from server.src.agent.agents import AgentType
 
 
-class BaseAgent:
+class BaseAgent(ABC):
 
     x: int
     y: int
@@ -12,13 +13,6 @@ class BaseAgent:
     health: int
     hunger: int = 100
     thirst: int = 100
+    vision: int = 4
     symbol: str
     agent_type: AgentType
-
-    # TODO take into consideration defense
-    def take_damage(self, hp):
-        self.health -= hp
-        return self.health <= 0
-
-    def heal(self, hp):
-        self.health += hp

@@ -25,6 +25,7 @@ class TestAgent:
         agent: impl.BaseAgent = agent_class()
         assert agent.hunger == 100
         assert agent.thirst == 100
+        assert agent.vision == 4
 
     def test_worker_stats(self):
         agent: impl.BaseAgent = impl.Worker()
