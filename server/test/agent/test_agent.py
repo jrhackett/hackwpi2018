@@ -1,5 +1,4 @@
 import pytest
-from typing import Dict
 from server.src.map.resources import ResourceType
 from server.src.agent.agents import AgentType
 from server.src.agent import impl
