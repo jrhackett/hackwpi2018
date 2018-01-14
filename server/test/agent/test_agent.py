@@ -28,7 +28,7 @@ class TestAgent:
 
     def test_worker_stats(self):
         agent: impl.BaseAgent = impl.Worker()
-        expectedSkills = {
+        expected_skills = {
             ResourceType.COAL: 50,
             ResourceType.COPPER: 50,
             ResourceType.FOOD: 50,
@@ -39,7 +39,7 @@ class TestAgent:
             ResourceType.WOOD: 50
         }
         for skill, value in agent.resource_skills.items():
-            assert value == expectedSkills.get(skill)
+            assert value == expected_skills.get(skill)
         assert agent.speed == 30
         assert agent.attack == 5
         assert agent.defense == 5
@@ -47,7 +47,7 @@ class TestAgent:
 
     def test_warrior_stats(self):
         agent: impl.BaseAgent = impl.Warrior()
-        expectedSkills = {
+        expected_skills = {
             ResourceType.COAL: 10,
             ResourceType.COPPER: 10,
             ResourceType.FOOD: 10,
@@ -58,7 +58,7 @@ class TestAgent:
             ResourceType.WOOD: 10
         }
         for skill, value in agent.resource_skills.items():
-            assert value == expectedSkills.get(skill)
+            assert value == expected_skills.get(skill)
         assert agent.speed == 40
         assert agent.attack == 25
         assert agent.defense == 25
@@ -66,7 +66,7 @@ class TestAgent:
 
     def test_scout_stats(self):
         agent: impl.BaseAgent = impl.Scout()
-        expectedSkills = {
+        expected_skills = {
             ResourceType.COAL: 20,
             ResourceType.COPPER: 20,
             ResourceType.FOOD: 20,
@@ -77,7 +77,7 @@ class TestAgent:
             ResourceType.WOOD: 20
         }
         for skill, value in agent.resource_skills.items():
-            assert value == expectedSkills.get(skill)
+            assert value == expected_skills.get(skill)
         assert agent.speed == 60
         assert agent.attack == 10
         assert agent.defense == 10
