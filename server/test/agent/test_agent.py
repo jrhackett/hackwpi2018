@@ -17,9 +17,9 @@ class TestAgent:
         assert expected_symbol == agent.symbol
 
     @pytest.mark.parametrize('agent_class', [
-        (impl.Scout),
-        (impl.Warrior),
-        (impl.Worker)
+        impl.Scout,
+        impl.Warrior,
+        impl.Worker
     ])
     def test_agent_common_stats(self, agent_class):
         agent: impl.BaseAgent = agent_class()
