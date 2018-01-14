@@ -41,7 +41,7 @@ class TestAgent:
         }
         for skill, value in agent.resource_skills.items():
             assert value == expected_skills.get(skill)
-        assert agent.speed == 30
+        assert agent.speed == 2
         assert agent.attack == 5
         assert agent.defense == 5
         assert agent.health == 50
@@ -60,7 +60,7 @@ class TestAgent:
         }
         for skill, value in agent.resource_skills.items():
             assert value == expected_skills.get(skill)
-        assert agent.speed == 40
+        assert agent.speed == 3
         assert agent.attack == 25
         assert agent.defense == 25
         assert agent.health == 100
@@ -79,7 +79,7 @@ class TestAgent:
         }
         for skill, value in agent.resource_skills.items():
             assert value == expected_skills.get(skill)
-        assert agent.speed == 60
+        assert agent.speed == 5
         assert agent.attack == 10
         assert agent.defense == 10
         assert agent.health == 25

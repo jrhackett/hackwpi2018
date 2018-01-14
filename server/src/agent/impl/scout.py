@@ -17,7 +17,7 @@ class Scout(BaseAgent):
             ResourceType.WATER: 20,
             ResourceType.WOOD: 20
         }
-        self.speed = 60
+        self.speed = 5
         self.attack = 10
         self.defense = 10
         self.health = 25

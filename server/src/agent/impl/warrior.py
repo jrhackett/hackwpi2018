@@ -17,7 +17,7 @@ class Warrior(BaseAgent):
             ResourceType.WATER: 10,
             ResourceType.WOOD: 10
         }
-        self.speed = 40
+        self.speed = 3
         self.attack = 25
         self.defense = 25
         self.health = 100
