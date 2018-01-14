@@ -14,3 +14,11 @@ class BaseAgent:
     health: int
     symbol: str
     agent_type: AgentType
+
+    # TODO take into consideration defense
+    def take_damage(self, hp):
+        self.health -= hp
+        return self.health <= 0
+
+    def heal(self, hp):
+        self.health += hp
