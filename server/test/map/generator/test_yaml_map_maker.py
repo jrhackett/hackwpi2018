@@ -1,4 +1,4 @@
-from swarm_af_server.src.map.generator.yaml_map_maker import YamlMapMaker
+from server.src.map.generator.yaml_map_maker import YamlMapMaker
 
 
 class TestYamlMapMaker:
