@@ -10,6 +10,8 @@ class BaseAgent:
     attack: int
     defense: int
     health: int
+    hunger: int = 100
+    thirst: int = 100
     symbol: str
     agent_type: AgentType
 
