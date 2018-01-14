@@ -4,8 +4,8 @@ from server.src.agent.agents import AgentType
 
 class BaseAgent(ABC):
 
-    x: int
-    y: int
+    x: int = 0
+    y: int = 0
     resource_skills: dict
     speed: int
     attack: int
@@ -16,3 +16,10 @@ class BaseAgent(ABC):
     vision: int = 4
     symbol: str
     agent_type: AgentType
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+
+    def get_position(self):
+        return self.x, self.y
