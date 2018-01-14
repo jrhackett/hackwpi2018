@@ -11,4 +11,3 @@ class ResourceType(Enum):
     OIL = 6
     COAL = 7
     GOLD = 8
-

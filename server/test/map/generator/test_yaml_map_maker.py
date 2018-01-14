@@ -5,3 +5,5 @@ class TestYamlMapMaker:
 
     def test_default_map_maker_creation_raises_no_errors(self):
         map_maker = YamlMapMaker()
+        map = map_maker.generate_map()
+        assert map
