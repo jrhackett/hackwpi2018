@@ -24,12 +24,14 @@ class MoveAction(BaseAction):
             distance_traveled: int = 0
             while distance_traveled < self.performing_agent.speed:
                 if x_diff > 0:
-                    self.performing_agent.point.set_point(self.performing_agent.point.x + 1, self.performing_agent.point.y)
+                    self.performing_agent.point.set_point(self.performing_agent.point.x + 1,
+                                                          self.performing_agent.point.y)
                     distance_traveled += 1
                     x_diff -= 1
                 if distance_traveled >= self.performing_agent.speed:
                     break
                 if y_diff > 0:
-                    self.performing_agent.point.set_point(self.performing_agent.point.x, self.performing_agent.point.y + 1)
+                    self.performing_agent.point.set_point(self.performing_agent.point.x,
+                                                          self.performing_agent.point.y + 1)
                     distance_traveled += 1
                     y_diff -= 1

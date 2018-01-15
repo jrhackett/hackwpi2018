@@ -40,4 +40,3 @@ class AgentFactory:
 
         agent.id = AgentFactory.__get_next_id()
         return agent
-
