@@ -5,7 +5,7 @@ from server.src.map.tiles.tile_factory import TileFactory
 
 class Map:
     """
-    2x2 representation of the world in which the simulation will take place.
+    2D representation of the world in which the simulation will take place.
     """
     def __init__(self, width: int, height: int):
         self.width = width
