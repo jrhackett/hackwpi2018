@@ -21,12 +21,12 @@ class BaseAgent(ABC):
     agent_type: AgentType
 
     def move(self, x: int, y: int):
-        x_diff = abs(self.point.x - x)
-        y_diff = abs(self.point.y - y)
+        x_diff: int = abs(self.point.x - x)
+        y_diff: int = abs(self.point.y - y)
         if x_diff + y_diff <= self.speed:
             self.point.set_point(x, y)
         else:
-            c = 0
+            c: int = 0
             while c < self.speed:
                 if x_diff > 0:
                     self.point.set_point(self.point.x + 1, self.point.y)
