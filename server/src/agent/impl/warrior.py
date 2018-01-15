@@ -4,7 +4,9 @@ from server.src.map.resources import ResourceType
 
 
 class Warrior(BaseAgent):
-
+    """
+    Warrior agent excels at dealing and taking damage, but moves slowly and has poor resource collection
+    """
     def __init__(self):
         super().__init__()
         self.resource_skills = {

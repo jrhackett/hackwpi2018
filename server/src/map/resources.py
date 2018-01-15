@@ -2,6 +2,9 @@ from enum import Enum
 
 
 class ResourceType(Enum):
+    """
+    Enumeration of all the possible types of tiles
+    """
     NONE = 0
     WATER = 1
     IRON = 2

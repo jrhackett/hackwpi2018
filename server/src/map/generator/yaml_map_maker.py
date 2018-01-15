@@ -12,16 +12,30 @@ LOG = logging.getLogger(__name__)
 
 
 class YamlMapMaker:
-
-    def __init__(self, yaml_path: str = None):
+    """
+    Handles the creation of maps from a yaml file.  Can also be passed a python dictionary directly to generate a map
+    """
+    def __init__(self, yaml_path: str = None, yaml_data: dict = None):
         yaml_path = yaml_path or os.path.join(__location__, 'sample_cfg.yaml')
-        with open(yaml_path, 'r') as yaml_file:
-            self.yaml_data = yaml.load(yaml_file)
+
+        if yaml_data:
+            self.yaml_data = yaml_data
+        else:
+            with open(yaml_path, 'r') as yaml_file:
+                self.yaml_data = yaml.load(yaml_file)
 
     def generate_map(self) -> Map:
+        """
+        Creates a new map based on the yaml data read in during the object's creation.
+        :return:
+        """
         map = Map(self.yaml_data['map']['width'], self.yaml_data['map']['height'])
         total_tiles = self.yaml_data['map']['width'] * self.yaml_data['map']['width']
         total_resource_tiles = total_tiles * self.yaml_data['map']['density']
+
+        if not self.yaml_data.get('resources'):
+            LOG.debug("Map does not have any resource configuration and will be blank.")
+            return map
 
         total_resource_availability = 0
         LOG.debug("Calculating total resource availability...")
@@ -79,7 +93,7 @@ class YamlMapMaker:
     @staticmethod
     def get_resource_quantity(average_yield: int, variation: float) -> int:
         """
-
+        Gets a resource quantity that varies from the average_yield by some percentage
         :param average_yield: average resource value
         :param variation: variation as a percent
         :return: the actual resource value that will be generated

@@ -3,7 +3,10 @@ from server.src.map.resources import ResourceType
 
 
 class TileFactory:
-
+    """
+    Factory to create new tiles.  Tiles should always be created via the TileFactory and never directly from their
+    __init__ methods.
+    """
     @staticmethod
     def make_tile(resource_type: ResourceType):
         if resource_type == ResourceType.COAL:

@@ -3,7 +3,7 @@ from server.src.map.resources import ResourceType
 
 
 class IronTile(BaseTile):
-
+    "Iron resource"
     def __init__(self):
         super().__init__()
         self.resource_type = ResourceType.IRON
