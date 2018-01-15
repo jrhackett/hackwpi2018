@@ -15,11 +15,11 @@ class TestAgent:
     ])
     def test_basic_movement_in_one_positive_direction(self, agent_class):
         agent: impl.BaseAgent = agent_class()
-        pos = agent.get_position()
-        agent.move(pos[0] + 1, pos[1])
-        new_pos = agent.get_position()
-        assert new_pos[0] == pos[0] + 1
-        assert new_pos[1] == pos[1]
+        x, y = agent.get_position()
+        agent.move(x + 1, y)
+        new_x, new_y = agent.get_position()
+        assert new_x == x + 1
+        assert new_y == y
 
     @pytest.mark.parametrize('agent_class', [
         impl.Scout,
