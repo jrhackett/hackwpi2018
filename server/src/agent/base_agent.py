@@ -20,27 +20,27 @@ class BaseAgent(ABC):
     symbol: str = ""
     agent_type: AgentType
 
-    def move(self, x, y):
-        x_diff = abs(self.point.get_x() - x)
-        y_diff = abs(self.point.get_y() - y)
+    def move(self, x: int, y: int):
+        x_diff = abs(self.point.x - x)
+        y_diff = abs(self.point.y - y)
         if x_diff + y_diff <= self.speed:
             self.point.set_point(x, y)
         else:
             c = 0
             while c < self.speed:
                 if x_diff > 0:
-                    self.point.set_x(self.point.get_x() + 1)
+                    self.point.set_point(self.point.x + 1, self.point.y)
                     c += 1
                     x_diff -= 1
                 if c >= self.speed:
                     break
                 if y_diff > 0:
-                    self.point.set_y(self.point.get_y() + 1)
+                    self.point.set_point(self.point.x, self.point.y + 1)
                     c += 1
                     y_diff -= 1
 
     def get_position(self):
-        return self.point.get_point()
+        return self.point.x, self.point.y
 
     def get_speed(self):
         return self.speed
