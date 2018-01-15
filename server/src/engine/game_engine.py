@@ -18,7 +18,10 @@ class GameEngine:
         self.entities: List[ActiveEntity] = []
 
     def run(self):
-        pass
+        while self.current_tick < self.number_of_ticks:
+            self.handle_tick()
+            if self.time_per_tick:
+                time.sleep(self.time_per_tick)
 
     def handle_tick(self, shuffle_entities: bool = True):
         LOG.debug("Starting execution of tick <%s>...", self.current_tick)
@@ -31,3 +34,4 @@ class GameEngine:
             entity.perform_action()
 
         LOG.debug("Finshed execution of tick <%s>.", self.current_tick)
+        self.current_tick += 1
