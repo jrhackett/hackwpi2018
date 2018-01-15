@@ -3,7 +3,9 @@ from .scout import Scout
 from .warrior import Warrior
 from .worker import Worker
 
-__all__ = ['BaseAgent',
-           'Scout',
-           'Warrior',
-           'Worker']
+__all__ = [
+    'BaseAgent',
+    'Scout',
+    'Warrior',
+    'Worker'
+]
