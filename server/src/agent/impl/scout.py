@@ -4,7 +4,9 @@ from server.src.map.resources import ResourceType
 
 
 class Scout(BaseAgent):
-
+    """
+    Scout agent excels at quickly moving between tiles, but lacks good resource collection skills and is very fragile.
+    """
     def __init__(self):
         super().__init__()
         self.resource_skills = {

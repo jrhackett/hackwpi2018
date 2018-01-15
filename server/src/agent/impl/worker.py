@@ -4,7 +4,9 @@ from server.src.map.resources import ResourceType
 
 
 class Worker(BaseAgent):
-
+    """
+    Worker agent excels at resource collection, but moves slowly and is moderately fragile.
+    """
     def __init__(self):
         super().__init__()
         self.resource_skills = {

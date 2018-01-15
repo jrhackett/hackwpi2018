@@ -3,7 +3,9 @@ from server.src.map.resources import ResourceType
 
 
 class WaterTile(BaseTile):
-
+    """
+    Water resource
+    """
     def __init__(self):
         super().__init__()
         self.resource_type = ResourceType.WATER

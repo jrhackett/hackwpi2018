@@ -1,46 +1,55 @@
 import logging
-from abc import ABC
+
+from server.src.agent.actions import impl as actions_impl
 from server.src.agent.agents import AgentType
+from server.src.engine.active_entity import ActiveEntity
 from server.src.point.point import Point
 
 LOG = logging.getLogger(__name__)
 
 
-class BaseAgent(ABC):
+class BaseAgent(ActiveEntity):
+    """
+    Serves as a basis for all agents
+    """
+    def __init__(self):
+        self.point: Point = Point()
+        self.id: int = 0
+        self.resource_skills: dict = {}
+        self.speed: int = 0
+        self.attack: int = 0
+        self.defense: int = 0
+        self.health: int = 0
+        self.hunger: int = 100
+        self.thirst: int = 100
+        self.vision: int = 4
+        self.symbol: str = ""
+        self.agent_type: AgentType
+        self.actions: list = []
 
-    point: Point = Point()
-    resource_skills: dict = {}
-    speed: int = 0
-    attack: int = 0
-    defense: int = 0
-    health: int = 0
-    hunger: int = 100
-    thirst: int = 100
-    vision: int = 4
-    symbol: str = ""
-    agent_type: AgentType
+    def perform_actions(self):
+        """
+        Executes all of the actions that are currently in this agent's queue, and clears the queue as they are executed
+        :return:
+        """
+        while self.actions:
+            action = self.actions.pop(0)
+            action.perform_action()
 
-    def move(self, x: int, y: int):
-        x_diff: int = abs(self.point.x - x)
-        y_diff: int = abs(self.point.y - y)
-        if x_diff + y_diff <= self.speed:
-            self.point.set_point(x, y)
-        else:
-            c: int = 0
-            while c < self.speed:
-                if x_diff > 0:
-                    self.point.set_point(self.point.x + 1, self.point.y)
-                    c += 1
-                    x_diff -= 1
-                if c >= self.speed:
-                    break
-                if y_diff > 0:
-                    self.point.set_point(self.point.x, self.point.y + 1)
-                    c += 1
-                    y_diff -= 1
+    def add_move_action(self, target_x: int, target_y: int):
+        """
+        Add a MoveAction to the agent's queue
+        :param target_x: x position to move to
+        :param target_y: y position to move to
+        :return:
+        """
+        move_action = actions_impl.MoveAction(self, target_x, target_y)
+        self.actions.append(move_action)
 
-    def get_position(self):
-        return self.point.x, self.point.y
-
-    def get_speed(self):
-        return self.speed
+    def add_collect_action(self):
+        """
+        Adds a CollectAction to the agent's queue
+        :return:
+        """
+        collect_action = actions_impl.CollectAction(self)
+        self.actions.append(collect_action)
