@@ -5,4 +5,6 @@ tile_exhausted_instance = []
 
 
 class TileExhaustedSocketHandler(BaseSocketHandler):
-    topic: WebsocketTopic = WebsocketTopic.TILE_EXHAUSTED
+    def __init__(self):
+        super.__init__()
+        self.topic = WebsocketTopic.PLAYER_MOVED

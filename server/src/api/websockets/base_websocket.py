@@ -1,9 +1,15 @@
 from tornado import websocket
+from server.src.api.websockets.websocket_topic import WebsocketTopic
 
 base_instance = []
 
 
 class BaseSocketHandler(websocket.WebSocketHandler):
+    topic: WebsocketTopic
+
+    def __init__(self):
+        super.__init__()
+
     def data_received(self, chunk):
         pass
 

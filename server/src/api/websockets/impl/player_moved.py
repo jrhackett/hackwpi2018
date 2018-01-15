@@ -5,4 +5,6 @@ player_moved_instance = []
 
 
 class PlayerMovedSocketHandler(BaseSocketHandler):
-    topic: WebsocketTopic = WebsocketTopic.PLAYER_MOVED
+    def __init__(self):
+        super.__init__()
+        self.topic = WebsocketTopic.PLAYER_MOVED
