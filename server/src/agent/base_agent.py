@@ -8,7 +8,7 @@ LOG = logging.getLogger(__name__)
 
 class BaseAgent(ABC):
 
-    point: Point = Point(0, 0)
+    point: Point = Point()
     resource_skills: dict = {}
     speed: int = 0
     attack: int = 0
