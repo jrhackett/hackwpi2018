@@ -8,12 +8,14 @@ from .oil_tile import OilTile
 from .water_tile import WaterTile
 from .wood_tile import WoodTile
 
-__all__ = ['CoalTile',
-           'CopperTile',
-           'FoodTile',
-           'GoldTile',
-           'IronTile',
-           'NoneTile',
-           'OilTile',
-           'WaterTile',
-           'WoodTile']
+__all__ = [
+    'CoalTile',
+    'CopperTile',
+    'FoodTile',
+    'GoldTile',
+    'IronTile',
+    'NoneTile',
+    'OilTile',
+    'WaterTile',
+    'WoodTile'
+]
