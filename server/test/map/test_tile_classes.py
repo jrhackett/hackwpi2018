@@ -15,7 +15,7 @@ class TestTileClasses:
         (impl.NoneTile, ResourceType.NONE, ' '),
         (impl.OilTile, ResourceType.OIL, 'O'),
         (impl.WaterTile, ResourceType.WATER, '~'),
-        (impl.WoodTile, ResourceType.WOOD, 'W'),
+        (impl.WoodTile, ResourceType.WOOD, 'W')
     ])
     def test_tile_symbols_and_enumerations(self, tile_class, expected_type: ResourceType, expected_symbol: str):
         tile: tiles.BaseTile = tile_class()
