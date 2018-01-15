@@ -17,7 +17,7 @@ class Worker(BaseAgent):
             ResourceType.WATER: 50,
             ResourceType.WOOD: 50
         }
-        self.speed = 30
+        self.speed = 2
         self.attack = 5
         self.defense = 5
         self.health = 50
