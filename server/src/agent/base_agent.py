@@ -34,7 +34,7 @@ class BaseAgent(ActiveEntity):
         """
         for action in self.actions:
             action.perform_action()
-            if action.ticks_required == action.ticks_executed:
+            if action.ticks_executed >= action.ticks_required:
                 self.actions.remove(action)
 
     def add_move_action(self, target_x: int, target_y: int):
