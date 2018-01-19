@@ -32,9 +32,10 @@ class BaseAgent(ActiveEntity):
         Executes all of the actions that are currently in this agent's queue, and clears the queue as they are executed
         :return:
         """
-        while self.actions:
-            action = self.actions.pop(0)
+        for action in self.actions:
             action.perform_action()
+            if action.ticks_executed >= action.ticks_required:
+                self.actions.remove(action)
 
     def add_move_action(self, target_x: int, target_y: int):
         """

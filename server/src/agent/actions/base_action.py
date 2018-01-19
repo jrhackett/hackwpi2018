@@ -4,9 +4,11 @@ class BaseAction:
     """
 
     priority: int
+    ticks_required: int
 
     def __init__(self, performing_agent):
         self.performing_agent = performing_agent
+        self.ticks_executed = 0
 
     def perform_action(self):
         pass

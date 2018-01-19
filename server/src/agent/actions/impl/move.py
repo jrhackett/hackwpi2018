@@ -9,6 +9,7 @@ class MoveAction(BaseAction):
         super().__init__(performing_agent)
         self.target_x = target_x
         self.target_y = target_y
+        self.ticks_required = 1
 
     def perform_action(self):
         """
@@ -35,3 +36,5 @@ class MoveAction(BaseAction):
                                                           self.performing_agent.point.y + 1)
                     distance_traveled += 1
                     y_diff -= 1
+
+        self.ticks_executed += 1
