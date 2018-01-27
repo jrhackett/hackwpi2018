@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld'
+import Banner from '@/components/Banner'
 
-describe('HelloWorld.vue', () => {
+describe('Banner.vue', () => {
   it('should render correct contents', () => {
-    const Constructor = Vue.extend(HelloWorld)
+    const Constructor = Vue.extend(Banner)
     const vm = new Constructor().$mount()
     expect(vm.$el.querySelector('.hello h1').textContent)
-      .toEqual('Welcome to Your Vue.js App')
+      .toEqual('Welcome to Swarm AF')
   })
 })
