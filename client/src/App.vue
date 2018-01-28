@@ -1,12 +1,16 @@
 <template>
   <div id="app">
+    <div>
+      <h1>{{ bannerMsg }}</h1>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data: () => ({ bannerMsg: 'Welcome to Swarm AF' })
 }
 </script>
 
@@ -17,5 +21,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+h1 {
+  font-weight: normal;
 }
 </style>
